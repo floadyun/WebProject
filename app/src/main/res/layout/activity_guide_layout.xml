@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.base.lib.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_guide_acitivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GuideAcitivity">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/guide_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+    <com.base.lib.pageindicator.indicator.CircleIndicator
+        android:id="@+id/guide_point_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp">
+    </com.base.lib.pageindicator.indicator.CircleIndicator>
+    <ImageButton
+        android:id="@+id/guide_start_btn"
+        android:layout_width="438px"
+        android:layout_height="200px"
+        android:onClick="goLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="125px"
+        android:background="@null"
+        android:visibility="gone"/>
+</com.base.lib.autolayout.AutoRelativeLayout>

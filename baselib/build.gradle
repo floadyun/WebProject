@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildTollsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api "com.android.support:appcompat-v7:$rootProject.ext.supportLibVersion"
+    api "com.android.support:recyclerview-v7:$rootProject.ext.supportLibVersion"
+    api "com.android.support:design:$rootProject.ext.supportLibVersion"
+    compileOnly "com.android.support:support-annotations:$rootProject.ext.supportLibVersion"
+    implementation "com.android.support:support-core-ui:$rootProject.ext.supportLibVersion"
+    testImplementation "junit:junit:${rootProject.ext.junitVersion}"
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    /**网络框架*/
+    api 'com.squareup.okhttp3:okhttp:3.10.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    api 'io.reactivex.rxjava2:rxjava:2.1.16'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api 'com.google.code.gson:gson:2.8.5'
+    /** stetho网络抓包  开发调试工具 正式打包必须注释   ***/
+    api 'com.facebook.stetho:stetho:1.5.0'
+    api 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+    api 'com.facebook.stetho:stetho-js-rhino:1.5.0'
+    /**图片缓存*/
+    api 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    //进度加载
+    api 'com.kaopiz:kprogresshud:1.1.0'
+    //事件传递
+    api 'org.greenrobot:eventbus:3.1.1'
+    //动态权限检查
+    api 'com.github.tbruyelle:rxpermissions:0.10.2'
+    //log日志输出
+    api 'com.orhanobut:logger:2.2.0'
+    /**Nucleus MVP框架 */
+    api 'info.android15.nucleus5:nucleus:7.0.0'
+    api 'info.android15.nucleus5:nucleus-support-v4:7.0.0'
+    api 'info.android15.nucleus5:nucleus-support-v7:7.0.0'
+    //动画框架
+    api 'com.nineoldandroids:library:2.4.0'
+    //图片选择框架
+    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+}
+

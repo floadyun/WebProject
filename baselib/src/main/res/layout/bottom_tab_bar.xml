@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.base.lib.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <View
+        android:id="@+id/split"
+        style="@style/normal_line_style"/>
+    <com.base.lib.bottomtabbar.custom.CustomFragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_tab_height">
+        <com.base.lib.autolayout.AutoFrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0" />
+    </com.base.lib.bottomtabbar.custom.CustomFragmentTabHost>
+</com.base.lib.autolayout.AutoLinearLayout>

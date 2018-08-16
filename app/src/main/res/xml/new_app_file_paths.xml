@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="lib_update_app_files"
+        path="."/>
+    <external-path
+        name="camera_photos"
+        path="." />
+    <external-cache-path
+        name="agenweb_files"
+        path="agentweb-cache"/>
+</paths>
